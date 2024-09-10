@@ -2,16 +2,17 @@
 
 <dl>
   <td>Nombre:</td>
+  <!-- One way data binding -->
   <dd> {{ name }}</dd>
 
   <td>Edad:</td>
   <dd> {{ age }}</dd>
 
   <td>Método:</td>
-  <dd> algún método:</dd>
+  <dd> {{ getHeroDescription() }} </dd>
 
   <td>Capitalizado:</td>
-  <dd> nombre capitalizado:</dd>
+  <dd> {{ capitalizedName }} </dd>
 </dl>
 
 <button class="btn btn-primary mx-2">
