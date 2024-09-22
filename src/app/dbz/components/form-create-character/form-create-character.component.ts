@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+// Interfaces
+import { Character } from '../../interfaces/character.interface';
 
 @Component({
   selector: 'app-form-create-character',
   templateUrl: './form-create-character.component.html',
   styleUrls: ['./form-create-character.component.css']
 })
-export class FormCreateCharacterComponent implements OnInit {
+export class FormCreateCharacterComponent {
 
-  constructor() { }
-
-  ngOnInit() {
+  public character: Character = {
+    name: '',
+    power: 0
   }
 
+  emitCharacter() {
+    console.log(this.character);
+  }
 }
