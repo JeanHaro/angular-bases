@@ -23,4 +23,9 @@ export class DbzMainPageComponent {
       power: 7500
     }
   ];
+
+  odNewCharacter (character: Character): void {
+    console.log('MainPage');
+    console.log(character);
+  }
 }
