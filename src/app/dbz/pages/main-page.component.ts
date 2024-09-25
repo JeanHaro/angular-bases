@@ -25,7 +25,10 @@ export class DbzMainPageComponent {
   ];
 
   odNewCharacter (character: Character): void {
-    console.log('MainPage');
-    console.log(character);
+    this.characters.push(character);
+  }
+
+  onDeleteCharacter (id: number) {
+    this.characters.splice(id);
   }
 }
