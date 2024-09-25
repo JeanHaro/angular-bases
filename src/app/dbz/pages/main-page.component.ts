@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 
-// Interfaces
+// Servicios
+import { DbzService } from '../services/dbz.service';
+
+// Interface
 import { Character } from '../interfaces/character.interface';
 
 @Component({
@@ -9,26 +12,16 @@ import { Character } from '../interfaces/character.interface';
 })
 
 export class DbzMainPageComponent {
-  public characters: Character[] = [
-    {
-      name: 'Krilin',
-      power: 1000
-    },
-    {
-      name: 'Goku',
-      power: 9500
-    },
-    {
-      name: 'Vegetta',
-      power: 7500
-    }
-  ];
 
-  odNewCharacter (character: Character): void {
-    this.characters.push(character);
+  constructor (
+    public dbzService: DbzService
+  ) {}
+
+  onDeleteCharacter (index: number) {
+    this.dbzService.onDeleteCharacter(index);
   }
 
-  onDeleteCharacter (id: number) {
-    this.characters.splice(id, 1);
+  odNewCharacter (character: Character) {
+    this.dbzService.odNewCharacter(character);
   }
 }
