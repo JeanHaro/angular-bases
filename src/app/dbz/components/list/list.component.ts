@@ -19,13 +19,9 @@ export class ListComponent {
   @Output()
   public id: EventEmitter<number> = new EventEmitter();
 
-  onDeleteId (index: number) {
-    this.id.emit(index);
-  }
-
   onDeleteCharacter (index: number): void {
     // TODO: Emitir el ID del personaje
-    console.log(index);
+    this.id.emit(index);
   }
 
 }

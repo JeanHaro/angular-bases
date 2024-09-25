@@ -29,6 +29,6 @@ export class DbzMainPageComponent {
   }
 
   onDeleteCharacter (id: number) {
-    this.characters.splice(id);
+    this.characters.splice(id, 1);
   }
 }
