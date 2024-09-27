@@ -14,8 +14,12 @@ import { Character } from '../interfaces/character.interface';
 export class DbzMainPageComponent {
 
   constructor (
-    public dbzService: DbzService
+    private dbzService: DbzService
   ) {}
+
+  getCharacters() {
+    return this.dbzService.characters;
+  }
 
   onDeleteCharacter (index: string) {
     this.dbzService.deleteCharacterById(index);
