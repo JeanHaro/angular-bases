@@ -17,15 +17,15 @@ export class DbzMainPageComponent {
     private dbzService: DbzService
   ) {}
 
-  getCharacters() {
-    return this.dbzService.characters;
+  get characters(): Character[] {
+    return [...this.dbzService.characters];
   }
 
   onDeleteCharacter (index: string) {
     this.dbzService.deleteCharacterById(index);
   }
 
-  odNewCharacter (character: Character) {
+  odNewCharacter (character: Character): void {
     this.dbzService.odNewCharacter(character);
   }
 }
