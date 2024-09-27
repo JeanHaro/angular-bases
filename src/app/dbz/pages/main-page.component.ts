@@ -17,8 +17,8 @@ export class DbzMainPageComponent {
     public dbzService: DbzService
   ) {}
 
-  onDeleteCharacter (index: number) {
-    this.dbzService.onDeleteCharacter(index);
+  onDeleteCharacter (index: string) {
+    this.dbzService.deleteCharacterById(index);
   }
 
   odNewCharacter (character: Character) {
